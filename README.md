@@ -106,6 +106,19 @@ python md_checkpoint_tracker.py --dir ./sim --json report.json
 # then parse report.json → resume_commands → write a new SBATCH script
 ```
 
+# One-shot resume (single-node config)
+```bash
+python md_checkpoint_tracker.py --dir ./sim_complex \
+    --type protein_ligand --auto-resume \
+    --ntmpi 1 --ntomp 16 --gpu-id 0
+
+# Dry run first to sanity-check the command
+python md_checkpoint_tracker.py --dir ./sim --auto-resume --dry-run
+
+# Watch + auto-resume on stall (polls every 5 min)
+python md_checkpoint_tracker.py --dir ./sim \
+    --auto-resume --watch --interval 300
+```
 ---
 
 ## One Gotcha
