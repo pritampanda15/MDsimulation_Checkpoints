@@ -1,5 +1,4 @@
-# MDsimulation_Checkpoints
-MD Simulation Checkpoint Progress Tracker
+# MD Simulation Checkpoint Progress Tracker
 
 ## Phase tracking
 Automatically walks through the canonical 4-phase GROMACS pipeline (EM → NVT → NPT → Production MD) for both protein-water and protein-ligand setups. Each phase is checked independently so partial completion is handled cleanly.
